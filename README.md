@@ -66,6 +66,7 @@ print cp.favorite_details(creds, myfav)
 | tests | str | Specify a comma-separated list of tests when retreiving a favorite chart.
 | node | str | The Catchpoint node id. |
 | waterfallToken | str | The watefall ID |
+| date | str | Requested hour in the format: MM-dd-yyyy HH:mm |
 
 
 #### Relative Time Requests
