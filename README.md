@@ -5,6 +5,9 @@ Catchpoint has two types of APIs, a push (subscriber) API and a pull REST API. T
 
 [API documentation](https://io.catchpoint.com/ui/Help) is available to Catchpoint customers.
 
+To see on a fast way how the API is working, you can test it at the [TestAPI
+Url](https://io.catchpoint.com/ui/Help/TestApi)
+
 ## Requirements
 
 Tested on Python 2.7.5
