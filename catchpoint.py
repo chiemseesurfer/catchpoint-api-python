@@ -271,3 +271,21 @@ class Catchpoint(object):
             .format(self.host, self.api_uri, product)
 
         return self._make_request(uri)
+
+    def waterfall(self, creds, testId, date=None):
+        """
+        retrieve the waterfall intervals for the current hour
+        """
+        if not self._auth:
+            self._authorize(creds)
+
+        self._debug("Creating waterfall url...")
+
+        if date:
+            uri = "https://{0}/{1}/waterfall/intervals/{2}?date={3}" \
+                .format(self.host, self.api_uri, testId, date)
+        else:
+            uri = "https://{0}/{1}/waterfall/intervals/{2}" \
+                .format(self.host, self.api_uri, testId)
+
+        return self._make_request(uri)
