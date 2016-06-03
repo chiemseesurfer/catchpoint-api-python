@@ -55,6 +55,7 @@ print cp.favorite_details(creds, myfav)
 | product | Retrieve products detail based on Id. | creds, id |
 | waterfall | Retrieve the waterfall intervals for the current hour/provided date hour. | creds, testId, date=None |
 | waterfall_data | Retrieve the waterfall for a given interval. | creds, waterfallToken |
+| tests | Retrieve the list of tests. | creds |
 
 ### Parameters
 
