@@ -243,3 +243,17 @@ class Catchpoint(object):
             .format(self.host, self.api_uri, node)
 
         return self._make_request(uri)
+
+    def products(self, creds):
+        """
+        Retrieve the list of products
+        """
+        if not self._auth:
+            self._authorize(creds)
+
+        self._debug("Creating products url...")
+
+        uri = "https://{0}/{1}/products" \
+            .format(self.host, self.api_uri)
+
+        return self._make_request(uri)
