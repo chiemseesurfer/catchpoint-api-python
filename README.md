@@ -48,6 +48,10 @@ print cp.favorite_details(creds, myfav)
 | favorite_data | Retrieve the data for a favorite chart, optionally overriding its timeframe or test set. | creds, favid, startTime=None, endTime=None, tz="UTC", tests=None |
 | nodes | Retrieve the list of nodes for the API consumer. | creds |
 | node | Retrieve a given node for the API consumer. | creds, node |
+| products | Retrieve Products. | creds |
+| product | Retrieve products detail based on Id. | creds, id |
+| waterfall | Retrieve the waterfall intervals for the current hour/provided date hour. | creds, testId, date=None |
+| waterfall_data | Retrieve the waterfall for a given interval. | creds, waterfallToken |
 
 ### Parameters
 
@@ -61,6 +65,8 @@ print cp.favorite_details(creds, myfav)
 | tz | str | Optionally set the timezone to correlate to the Catchpoint test's configuration. |
 | tests | str | Specify a comma-separated list of tests when retreiving a favorite chart.
 | node | str | The Catchpoint node id. |
+| waterfallToken | str | The watefall ID |
+
 
 #### Relative Time Requests
 Catchpoint's API requires specific UTC formatted timestamps when requesting datasets. These can be made relative by setting `startTime` to a negative integer that represents number of minutes into the past, and set `endTime` to 'now'.
