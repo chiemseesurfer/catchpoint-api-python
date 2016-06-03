@@ -289,3 +289,17 @@ class Catchpoint(object):
                 .format(self.host, self.api_uri, testId)
 
         return self._make_request(uri)
+
+    def waterfall_data(self, creds, waterfallToken):
+        """
+        retrieve the waterfall for a given interval
+        """
+        if not self._auth:
+            self._authorize(creds)
+
+        self._debug("Creating waterfall url...")
+
+        uri = "https://{0}/{1}/waterfall/{2}/data" \
+            .format(self.host, self.api_uri, waterfallToken)
+
+        return self._make_request(uri)
